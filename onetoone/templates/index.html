@@ -1,0 +1,17 @@
+<h1>Trainers list</h1>
+<table align="center" border="1px">
+{%for i in tr%}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.tname}}</td>
+        <td>{{i.language}}</td>
+    </tr>
+{%endfor%}
+</table>
+<h2>Add Trainers</h2>
+<from action="addtrainers" method='post'>
+{%csrf_token%}
+name<input type="text" name="tname" /><br>
+language<input type="text" name="lang" /><br>
+<button>add Trainer</button>
+</form>
